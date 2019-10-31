@@ -1,8 +1,8 @@
-require "warden"
+module Warden
+  module SharedSession
 
-module Warden::SharedSession
-
-  VERSION = '0.0.1'.freeze
+    VERSION = '0.0.1'.freeze
+  end
 
 end
 

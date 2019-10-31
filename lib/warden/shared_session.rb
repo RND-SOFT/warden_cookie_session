@@ -1,3 +1,4 @@
+require "warden"
 require 'warden/shared_session/version'
 require 'warden/shared_session/configuration'
 require 'warden/shared_session/strategy'
