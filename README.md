@@ -74,6 +74,7 @@ Warden::CookieSession.configure do |config|
 
   config.wrapper = Warden::CookieSession::DefaultWrapper.new(User)
 end
+```
 
 
 # Installation
