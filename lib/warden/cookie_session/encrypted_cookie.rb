@@ -1,4 +1,4 @@
-class Warden::SharedSession::EncryptedCookie
+class Warden::CookieSession::EncryptedCookie
 
   attr_reader :store, :cookie, :secret, :encryptor
 

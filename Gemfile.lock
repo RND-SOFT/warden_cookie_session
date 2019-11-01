@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    warden_shared_session (0.0.1)
+    warden_cookie_session (0.1.0)
       warden
 
 GEM
@@ -53,7 +53,7 @@ DEPENDENCIES
   rspec_junit_formatter
   simplecov
   simplecov-console
-  warden_shared_session!
+  warden_cookie_session!
 
 BUNDLED WITH
    2.0.2

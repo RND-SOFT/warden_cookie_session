@@ -1,22 +1,22 @@
 $:.push File.expand_path('lib', __dir__)
 
 # Maintain your gem's version:
-require 'warden/shared_session/version'
+require 'warden/cookie_session/version'
 
-Gem::Specification.new 'warden_shared_session' do |spec|
-  spec.version       = ENV['BUILDVERSION'].to_i > 0 ? "#{Warden::SharedSession::VERSION}.#{ENV['BUILDVERSION'].to_i}" : Warden::SharedSession::VERSION
+Gem::Specification.new 'warden_cookie_session' do |spec|
+  spec.version       = ENV['BUILDVERSION'].to_i > 0 ? "#{Warden::CookieSession::VERSION}.#{ENV['BUILDVERSION'].to_i}" : Warden::CookieSession::VERSION
   spec.authors       = ['Samoilenko Yuri']
   spec.email         = ['kinnalru@gmail.com']
   spec.description   = spec.summary = '!!!!'
   spec.homepage      = 'https://github.com/RnD-Soft/timeouter'
   spec.license       = 'MIT'
 
-  spec.files         = %w[lib/warden_shared_session.rb
-                          lib/warden/shared_session.rb
-                          lib/warden/shared_session/version.rb
-                          lib/warden/shared_session/configuration.rb
-                          lib/warden/shared_session/encrypted_cookie.rb
-                          lib/warden/shared_session/strategy.rb
+  spec.files         = %w[lib/warden_cookie_session.rb
+                          lib/warden/cookie_session.rb
+                          lib/warden/cookie_session/version.rb
+                          lib/warden/cookie_session/configuration.rb
+                          lib/warden/cookie_session/encrypted_cookie.rb
+                          lib/warden/cookie_session/strategy.rb
                           README.md LICENSE].reject do |f|
     f.match(%r{^(test|spec|features)/})
   end

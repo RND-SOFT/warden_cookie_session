@@ -28,7 +28,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
                                                                ])
 SimpleCov.start
 
-require 'warden_shared_session'
+require 'warden_cookie_session'
 
 $root = File.join(File.dirname(__dir__), 'spec')
 Dir[File.join(__dir__, 'support', '**', '*.rb')].sort.each {|f| require f }
