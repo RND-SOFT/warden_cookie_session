@@ -6,6 +6,7 @@ class Warden::CookieSession::EncryptedCookie
     @store = store
     @cookie = cookie
     @secret = secret
+    raise ArgumentError.new('secret must be 32 bytes') if @secret.length != 32
 
     @encryptor ||= ActiveSupport::MessageEncryptor.new(secret)
   end
@@ -17,8 +18,13 @@ class Warden::CookieSession::EncryptedCookie
     JSON(encryptor.decrypt_and_verify(value))
   end
 
-  def put(data)
-    store[cookie] = encryptor.encrypt_and_sign(data.to_json)
+  def put(data, domain: nil)
+    c = {
+      value: encryptor.encrypt_and_sign(data.to_json)
+    }
+    c[:domain] = domain if domain
+
+    store[cookie] = c
   end
 
   def clear
