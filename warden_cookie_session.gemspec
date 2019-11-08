@@ -7,8 +7,8 @@ Gem::Specification.new 'warden_cookie_session' do |spec|
   spec.version       = ENV['BUILDVERSION'].to_i > 0 ? "#{Warden::CookieSession::VERSION}.#{ENV['BUILDVERSION'].to_i}" : Warden::CookieSession::VERSION
   spec.authors       = ['Samoilenko Yuri']
   spec.email         = ['kinnalru@gmail.com']
-  spec.description   = spec.summary = '!!!!'
-  spec.homepage      = 'https://github.com/RnD-Soft/timeouter'
+  spec.description   = spec.summary = 'Use custom encrypted cookie for Warden instead of rack:session'
+  spec.homepage      = 'https://github.com/RnD-Soft/warden_cookie_session'
   spec.license       = 'MIT'
 
   spec.files         = %w[lib/warden_cookie_session.rb

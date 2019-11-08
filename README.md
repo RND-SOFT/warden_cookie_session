@@ -1,5 +1,18 @@
 # Warden Cookie Session
 
+
+[![Gem Version](https://badge.fury.io/rb/warden_cookie_session.svg)](https://rubygems.org/gems/warden_cookie_session)
+[![Gem](https://img.shields.io/gem/dt/warden_cookie_session.svg)](https://rubygems.org/gems/warden_cookie_session/versions)
+[![YARD](https://badgen.net/badge/YARD/doc/blue)](http://www.rubydoc.info/gems/warden_cookie_session)
+
+
+[![Coverage](https://lysander.x.rnds.pro/api/v1/badges/cs_coverage.svg)](https://lysander.x.rnds.pro/api/v1/badges/cs_coverage.html)
+[![Quality](https://lysander.x.rnds.pro/api/v1/badges/cs_quality.svg)](https://lysander.x.rnds.pro/api/v1/badges/cs_quality.html)
+[![Outdated](https://lysander.x.rnds.pro/api/v1/badges/cs_outdated.svg)](https://lysander.x.rnds.pro/api/v1/badges/cs_outdated.html)
+[![Vulnerabilities](https://lysander.x.rnds.pro/api/v1/badges/cs_vulnerable.svg)](https://lysander.x.rnds.pro/api/v1/badges/cs_vulnerable.html)
+
+
+
 Warden Cookie Session is a warden strategy to store auth in custom encrypted cookie(instead of rack:session).
 The main puprpose to allow store authorization between multiple rails applications, without sharing `secret_key_base`.  
 
