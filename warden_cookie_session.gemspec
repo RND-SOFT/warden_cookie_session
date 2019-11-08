@@ -16,6 +16,7 @@ Gem::Specification.new 'warden_cookie_session' do |spec|
                           lib/warden/cookie_session/version.rb
                           lib/warden/cookie_session/configuration.rb
                           lib/warden/cookie_session/encrypted_cookie.rb
+                          lib/warden/cookie_session/default_wrapper.rb
                           lib/warden/cookie_session/strategy.rb
                           README.md LICENSE].reject do |f|
     f.match(%r{^(test|spec|features)/})
