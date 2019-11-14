@@ -18,17 +18,17 @@ class Warden::CookieSession::EncryptedCookie
     JSON(encryptor.decrypt_and_verify(value))
   end
 
-  def put(data, domain: nil)
+  def put(data, domain)
     c = {
-      value: encryptor.encrypt_and_sign(data.to_json)
+      value:  encryptor.encrypt_and_sign(data.to_json),
+      domain: domain
     }
-    c[:domain] = domain if domain
 
     store[cookie] = c
   end
 
-  def clear
-    store.delete(cookie)
+  def clear(domain)
+    store.delete(cookie, domain: domain)
   end
 
 end

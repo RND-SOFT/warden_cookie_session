@@ -28,12 +28,12 @@ module Warden
 
         Warden::Manager.after_set_user do |user, auth, _opts|
           encrypted_cookie = Warden::CookieSession::Strategy.encrypted_cookie(auth.cookies)
-          encrypted_cookie.put(config.serialize_record(user), domain: auth.request.domain)
+          encrypted_cookie.put(config.serialize_record(user), auth.request.domain)
         end
 
         Warden::Manager.before_logout do |_user, auth, _opts|
           encrypted_cookie = Warden::CookieSession::Strategy.encrypted_cookie(auth.cookies)
-          encrypted_cookie.clear
+          encrypted_cookie.clear(auth.request.domain)
         end
       end
 
