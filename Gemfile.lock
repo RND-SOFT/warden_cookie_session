@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    warden_cookie_session (0.1.1)
+    warden_cookie_session (0.1.2)
       warden
 
 GEM

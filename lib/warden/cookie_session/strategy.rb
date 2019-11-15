@@ -3,7 +3,11 @@ require 'warden/cookie_session/encrypted_cookie'
 class Warden::CookieSession::Strategy < ::Warden::Strategies::Base
 
   def valid?
-    cookies[Warden::CookieSession.config.cookie]
+    @key_salt = cookies[Warden::CookieSession.config.cookie] && encrypted_cookie.get.presence
+  rescue StandardError => e
+    logger.warn "Warden::CookieSession::Strategy#valid? failed: #{e}"
+    logger.debug { e.backtrace }
+    return false
   end
 
   def store?
@@ -11,7 +15,7 @@ class Warden::CookieSession::Strategy < ::Warden::Strategies::Base
   end
 
   def authenticate!
-    key, salt = encrypted_cookie.get
+    key, salt = @key_salt || encrypted_cookie.get
     record = Warden::CookieSession.config.fetch_record(key)
     success!(record) if record && Warden::CookieSession.config.validate_record(record, salt)
   rescue StandardError => e
