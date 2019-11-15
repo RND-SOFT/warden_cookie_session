@@ -20,9 +20,11 @@ class Warden::CookieSession::EncryptedCookie
 
   def put(data, domain)
     store[cookie] = {
-      value:  encryptor.encrypt_and_sign(data.to_json),
-      domain: domain,
-      secure: false
+      value:     encryptor.encrypt_and_sign(data.to_json),
+      domain:    domain,
+      secure:    true,
+      http_only: true,
+      httponly:  true
     }
   end
 
