@@ -7,7 +7,7 @@ class Warden::CookieSession::Strategy < ::Warden::Strategies::Base
   rescue StandardError => e
     logger.warn "Warden::CookieSession::Strategy#valid? failed: #{e}"
     logger.debug { e.backtrace }
-    return false
+    false
   end
 
   def store?
@@ -17,6 +17,7 @@ class Warden::CookieSession::Strategy < ::Warden::Strategies::Base
   def authenticate!
     key, salt = @key_salt || encrypted_cookie.get
     record = Warden::CookieSession.config.fetch_record(key)
+
     success!(record) if record && Warden::CookieSession.config.validate_record(record, salt)
   rescue StandardError => e
     logger.warn "Warden::CookieSession::Strategy failed: #{e}"
