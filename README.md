@@ -6,10 +6,10 @@
 [![YARD](https://badgen.net/badge/YARD/doc/blue)](http://www.rubydoc.info/gems/warden_cookie_session)
 
 
-[![Coverage](https://lysander.rnds.pro/api/v1/badges/cs_coverage.svg)](https://lysander.x.rnds.pro/api/v1/badges/cs_coverage.html)
-[![Quality](https://lysander.rnds.pro/api/v1/badges/cs_quality.svg)](https://lysander.x.rnds.pro/api/v1/badges/cs_quality.html)
-[![Outdated](https://lysander.rnds.pro/api/v1/badges/cs_outdated.svg)](https://lysander.x.rnds.pro/api/v1/badges/cs_outdated.html)
-[![Vulnerabilities](https://lysander.rnds.pro/api/v1/badges/cs_vulnerable.svg)](https://lysander.x.rnds.pro/api/v1/badges/cs_vulnerable.html)
+[![Coverage](https://lysander.rnds.pro/api/v1/badges/cs_coverage.svg)](https://lysander.rnds.pro/api/v1/badges/cs_coverage.html)
+[![Quality](https://lysander.rnds.pro/api/v1/badges/cs_quality.svg)](https://lysander.rnds.pro/api/v1/badges/cs_quality.html)
+[![Outdated](https://lysander.rnds.pro/api/v1/badges/cs_outdated.svg)](https://lysander.rnds.pro/api/v1/badges/cs_outdated.html)
+[![Vulnerabilities](https://lysander.rnds.pro/api/v1/badges/cs_vulnerable.svg)](https://lysander.rnds.pro/api/v1/badges/cs_vulnerable.html)
 
 
 
