@@ -90,7 +90,7 @@ end
 ```
 
 
-# Installation
+# Installation 
 
 It's a gem:
 ```bash
